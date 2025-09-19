@@ -25,7 +25,7 @@ Doing this manually is slow and error-prone, so I built a Python script that aut
 import_file = "allow_list.txt"  
 remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
 ```
-![define file](Assign_file.png)
+![define file](screenshots/Assign_file.png)
 
 > This step sets up the inputs: the file we’re working on, and the IPs to be removed.
 
@@ -40,7 +40,7 @@ print(ip_addresses)  # shows all IPs in one block of text
 
 ```
 
-![Read file](open_textfile.png)
+![Read file](screenshots/open_textfile.png)
 
 
 > Loaded all IP addresses into memory so Python can work with them.
@@ -53,7 +53,7 @@ ip_addresses = ip_addresses.split()
 print(ip_addresses)  # now each IP is separated into a list
 
 ```
-![convert to list](change_to_list.png)
+![convert to list](screenshots/change_to_list.png)
 
 > Split the text into a list format, making it easier to check and remove entries.
 
@@ -71,7 +71,7 @@ print(ip_addresses)  # only valid IPs remain
 
 > Compared each IP with the removal list. If a match was found, it was removed.
 
-![Remove unauthorized IPs](remove_IPs.png)
+![Remove unauthorized IPs](screenshots/remove_IPs.png)
 
 ---
 
@@ -83,7 +83,7 @@ with open(import_file, "w") as file:
     file.write(ip_addresses)
 ```
 
-![Rewrite textfile](Rewrite_file_to_string.png)
+![Rewrite textfile](screenshots/Rewrite_file_to_string.png)
 
 > Saved the updated list back into the file, replacing the old version.
 
@@ -113,7 +113,7 @@ def update_file(import_file, remove_list):
 🔹 Step 7: Test the Function
 update_file("allow_list.txt", ["192.168.25.60", "192.168.140.81", "192.168.203.198"])
 
-![Test function with another list](test-function.png)
+![Test function with another list](screenshots/test-function.png)
 
 > Successfully tested with another set of IPs — the function worked as expected.
 
