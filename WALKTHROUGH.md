@@ -1,8 +1,12 @@
 # Project Context
 
-In cybersecurity, one common defense strategy is to only allow access from trusted IP addresses. These are stored in a file called allow_list.txt.
+In cybersecurity, one common defense strategy is to only allow access from trusted IP addresses. 
+These are stored in a file called `allow_list.txt`.
 
-Over time, some IPs need to be removed — for example, when a device is no longer authorized. Doing this manually is slow and error-prone, so I built a Python script that automates the process.
+Over time, some IPs need to be removed, for example, when a device is no longer authorized. 
+Doing this manually is slow and error-prone, so I built a Python script that automates the process.
+
+---
 
  ## Objective
 
@@ -14,7 +18,7 @@ Over time, some IPs need to be removed — for example, when a device is no long
 
 ---
 
-## Step-by-Step Walkthrough
+## Step-by-Step Walkthrough:
 
 ### Step 1: Define the Files and Lists
 ```py
@@ -43,7 +47,7 @@ print(ip_addresses)  # shows all IPs in one block of text
 
 ---
 
-### Step 3: Convert to a List
+### Step 3: Convert String to List
 ```py
 ip_addresses = ip_addresses.split()
 print(ip_addresses)  # now each IP is separated into a list
@@ -71,7 +75,7 @@ print(ip_addresses)  # only valid IPs remain
 
 ---
 
-### Step 5: Rewrite the File
+### Step 5: Rewrite Updated List Back to File
 ```py
 ip_addresses = " ".join(ip_addresses)
 
@@ -128,7 +132,7 @@ update_file("allow_list.txt", ["192.168.25.60", "192.168.140.81", "192.168.203.1
 
 ---
 
-### Key Lessons
+### Key Lessons:
 - **Automation:** Reduced manual errors and saved time
 - **Python for Cybersecurity:** Applied scripting to real security tasks
 - **Access Control:** Strengthened defenses by ensuring only valid IPs remain
