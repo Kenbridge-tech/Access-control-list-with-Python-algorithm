@@ -110,8 +110,9 @@ def update_file(import_file, remove_list):
 
 ---
 
-🔹 Step 7: Test the Function
-update_file("allow_list.txt", ["192.168.25.60", "192.168.140.81", "192.168.203.198"])
+### Step 7: Test the Function
+
+**Update_file("allow_list.txt", ["192.168.25.60", "192.168.140.81", "192.168.203.198"])**
 
 ![Test function with another list](screenshots/test-function.png)
 
